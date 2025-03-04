@@ -19,7 +19,8 @@ function somaA() {
     return somaAlga
 }
 
-console.log(somaA())
+var botao = document.getElementById("login")
+botao.addEventListener("click", login)
 
 function login() {
     const username = document.getElementById('username').value;
@@ -27,5 +28,15 @@ function login() {
     const message = document.getElementById('message');    
 
     const userCerto = "MalucoEverton"
-    const passwordCerto = somaAlga
+    const passwordCerto = somaA()
+
+    if(username === userCerto && password === passwordCerto.toString()) {
+        message.innerText = ""
+        
+        
+    } else if(username === "" || password === "") {
+        message.innerText = "Preencha os campos"
+    } else {
+        message.innerText = "Usuário ou senha incorretos"
+    }
 }

@@ -44,6 +44,9 @@ body {
 }
 
 .login-container button:hover {
-    background-color: rgba(63, 63, 239);
-    
+    background-color: rgba(63, 63, 239);   
+}
+
+#message {
+    color: red;
 }
