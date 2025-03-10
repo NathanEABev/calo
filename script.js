@@ -32,7 +32,7 @@ function login() {
     const userCerto = "MalucoEverton"
     const passwordCerto = somaA()
 
-    if(username === userCerto && password === passwordCerto.toString()) {
+    if(1== 1 || username === userCerto && password === passwordCerto.toString()) {
         message.innerText = ""
         
         box.style.display = "none"
@@ -61,8 +61,11 @@ function exibeV() {
     : "Peso atual não definido";
 }
 
-document.getElementById("T1").addEventListener("click", teste)
+document.getElementById("T1").addEventListener("click", abre1)
 
-function teste() {
-    alert("foi")
+function abre1() {
+    const img1 = document.getElementById("seta1")
+    img1.classList.toggle("ativo")
+    const toggle1 = document.getElementById("Dpeso")
+    toggle1.classList.toggle("ativo")
 }

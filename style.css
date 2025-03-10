@@ -73,18 +73,35 @@ main {
 }
 
 #T1 {
-    margin: 5px 0px 5px 20px;
+    margin: 5px 0 0 20px;
     display: flex;
-    width: 100%;
+    width: 93%;
+    border-bottom: 1px solid black;
 }
 
-#T1 img {
+#seta1 {
     width: 30px;
+    transition: transform 0.25s ease-out;
+}
+
+#seta1.ativo {
+    transform: rotate(180deg);
+    transition: transform 0.25s ease-out;
 }
 
 #Dpeso {
     background-color: rgb(230, 230, 230);
     padding: 10px 0 15px 45px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    display: none;
+}
+
+#Dpeso.ativo {
+    max-height: 300px;
+    display: block;
+    transition: max-height 0.5s ease-out;
 }
 
 #Dpeso h2 {
@@ -105,4 +122,42 @@ main {
     border-radius: 15px;
     background-color: rgb(220, 220, 220);
     padding-left: 7px;
+}
+
+
+
+#T2 {
+    margin: 5px 0 0 20px;
+    display: flex;
+    width: 93%;
+    border-bottom: 1px solid black;
+}
+
+#seta2 {
+    width: 30px;
+    transition: transform 0.25s ease-out;
+}
+
+#seta2.ativo {
+    transform: rotate(180deg);
+    transition: transform 0.25s ease-out;
+}
+
+#Dtrein {
+    background-color: rgb(230, 230, 230);
+    padding: 10px 0 15px 45px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    display: none;
+}
+
+#Dtrein.ativo {
+    max-height: 300px;
+    display: block;
+    transition: max-height 0.5s ease-out;
+}
+
+#Dtrein option, #Dtrein select {
+    font-size: 20px;
 }

@@ -17,14 +17,29 @@
         </div>
     </div>
     <main>
-        <div id="T1">
-            <h1 id="Pmark">Peso</h1><img src="seta.png">
-        </div>
-        <div id="Dpeso">
-            <h2 id="Mpeso"></h2>
-            <button id="regi">Alterar valor</button>
-            <input type="number" name="Vpeso" id="Vpeso">
-        </div>
+        <aside>
+            <div id="T1">
+                <h1 class="Pmark">Peso</h1><img src="seta.png" id="seta1">
+            </div>
+            <div id="Dpeso">
+                <h2 id="Mpeso"></h2>
+                <button id="regi">Alterar valor</button>
+                <input type="number" name="Vpeso" id="Vpeso">
+            </div>
+        </aside>
+        <aside>
+            <div id="T2">
+                <h1 class="Pmark">Treino</h1><img src="seta.png" id="seta2">
+            </div>
+            <div id="Dtrein" class="ativo">
+                <select name="treino" id="treino">
+                    <option value="sele" selected>Selecione o Treino</option>
+                    <option value="treinA">Treino A(Peito e Triceps)</option>
+                    <option value="treinB">Treino B(Biceps e Costas)</option>
+                    <option value="treinC">Treino C(Pernas)</option>
+                </select>
+            </div>
+        </aside>
     </main>
 
     <script src="script.js"></script>
