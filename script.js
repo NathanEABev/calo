@@ -19,6 +19,8 @@ function somaA() {
     return somaAlga
 }
 
+var main = document.getElementsByTagName("main")[0]
+var box = document.getElementById("box")
 var botao = document.getElementById("login")
 botao.addEventListener("click", login)
 
@@ -33,10 +35,34 @@ function login() {
     if(username === userCerto && password === passwordCerto.toString()) {
         message.innerText = ""
         
-        
+        box.style.display = "none"
+        main.style.filter = "none"
     } else if(username === "" || password === "") {
         message.innerText = "Preencha os campos"
     } else {
         message.innerText = "Usuário ou senha incorretos"
     }
+}
+
+window.onload = exibeV;
+
+document.getElementById("regi").addEventListener("click", registrar);
+
+function registrar() {
+    const pesoVal = document.getElementById("Vpeso").value;
+    localStorage.setItem('meuPeso', pesoVal);
+    exibeV();
+}
+
+function exibeV() {
+    const valorS = localStorage.getItem('meuPeso');
+    document.getElementById("Mpeso").textContent = valorS 
+    ? `O peso atual registrado em Kg é: ${valorS}Kg` 
+    : "Peso atual não definido";
+}
+
+document.getElementById("T1").addEventListener("click", teste)
+
+function teste() {
+    alert("foi")
 }
